@@ -3,10 +3,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  ChevronLeft, ChevronRight, Bot, Cpu, Sparkles, Code2, Boxes, Zap, Terminal, Globe,
-  Gamepad2, LayoutDashboard, Glasses, Braces, Lightbulb, Rocket, Handshake, Crown, Users,
-  TrendingUp, AlertTriangle, ShieldCheck, Github, Network, CheckCircle2, MessageSquare,
-  Layers, Lock, Star, Activity, Briefcase, FileCode2, ArrowRight, Search, FileJson
+  ChevronLeft, ChevronRight, Bot, Cpu, Sparkles, Code2, Zap, Terminal, Globe,
+  LayoutDashboard, Glasses, Lightbulb, Rocket, Users, TrendingUp, AlertTriangle, ShieldCheck, Github, Network, CheckCircle2, MessageSquare, Layers, Lock, Star, Activity, Briefcase, FileCode2, ArrowRight, Settings, ThumbsUp, Boxes, Search, FileJson, Crown
 } from 'lucide-react';
 
 const AnimatedSlide = ({ children, delay = 0, className = '' }: any) => (
@@ -477,22 +475,22 @@ const slides = [
           <SectionHeading title="Real Developer Implementation" icon={Code2} badge="Usability & Helpfulness" />
           <p className="text-lead" style={{ marginBottom: '24px' }}>How AI is actually being rolled out to engineering teams, and how it impacts their daily experience.</p>
           <div className="grid-2">
-             <div className="glass-panel">
-               <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '12px' }}><Settings size={28} /> Setup & Usability</h3>
-               <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-                 <li><strong>Easy Local Setup:</strong> Tools like Copilot and Cursor install as simple IDE extensions in seconds.</li>
-                 <li><strong>Seamless UX:</strong> The AI works in the background using "Ghost Text" (gray suggestions). Developers just hit <code>Tab</code> to accept.</li>
-                 <li><strong>Low Friction:</strong> No need to switch to a browser window; the AI lives where the code is written.</li>
-               </ul>
-             </div>
-             <div className="glass-panel">
-               <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-pink)', display: 'flex', alignItems: 'center', gap: '12px' }}><ThumbsUp size={28} /> Developer Feedback & Feelings</h3>
-               <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-                 <li><strong>Less Mental Fatigue:</strong> AI handles the boring, repetitive typing, keeping developers in a "flow state".</li>
-                 <li><strong>More Creativity:</strong> Developers spend time solving complex logic rather than remembering specific syntax.</li>
-                 <li><strong>Highly Helpful:</strong> 85% of developers report feeling more satisfied with their jobs after implementing AI tools.</li>
-               </ul>
-             </div>
+            <div className="glass-panel">
+              <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '12px' }}><Settings size={28} /> Setup & Usability</h3>
+              <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                <li><strong>Easy Local Setup:</strong> Tools like Copilot and Cursor install as simple IDE extensions in seconds.</li>
+                <li><strong>Seamless UX:</strong> The AI works in the background using "Ghost Text" (gray suggestions). Developers just hit <code>Tab</code> to accept.</li>
+                <li><strong>Low Friction:</strong> No need to switch to a browser window; the AI lives where the code is written.</li>
+              </ul>
+            </div>
+            <div className="glass-panel">
+              <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-pink)', display: 'flex', alignItems: 'center', gap: '12px' }}><ThumbsUp size={28} /> Developer Feedback & Feelings</h3>
+              <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                <li><strong>Less Mental Fatigue:</strong> AI handles the boring, repetitive typing, keeping developers in a "flow state".</li>
+                <li><strong>More Creativity:</strong> Developers spend time solving complex logic rather than remembering specific syntax.</li>
+                <li><strong>Highly Helpful:</strong> 85% of developers report feeling more satisfied with their jobs after implementing AI tools.</li>
+              </ul>
+            </div>
           </div>
         </AnimatedSlide>
       </div>
