@@ -730,6 +730,9 @@ export default function Presentation() {
 
   return (
     <main style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+      {/* Progress Bar */}
+      <div style={{ position: 'absolute', top: 0, left: 0, height: '4px', background: 'linear-gradient(to right, var(--accent-cyan), var(--accent-purple), var(--accent-pink))', width: `${((currentSlide + 1) / slides.length) * 100}%`, zIndex: 1000, transition: 'width 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }} />
+
       <style dangerouslySetInnerHTML={{
         __html: `
         .glass-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.01); }
@@ -766,7 +769,7 @@ export default function Presentation() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="controls">
+      <div className="controls" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
         <button
           className="control-btn"
           onClick={prevSlide}
@@ -775,6 +778,9 @@ export default function Presentation() {
         >
           <ChevronLeft size={24} />
         </button>
+        <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-secondary)', minWidth: '80px', textAlign: 'center' }}>
+          {currentSlide + 1} <span style={{ opacity: 0.5 }}>/</span> {slides.length}
+        </div>
         <button
           className="control-btn"
           onClick={nextSlide}
