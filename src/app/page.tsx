@@ -102,18 +102,21 @@ const slides = [
           <SectionHeading title="The Evolution of OpenAI" icon={Network} badge="Timeline" />
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)', padding: '40px', borderRadius: '24px', border: '1px solid var(--glass-border)', marginTop: '32px' }}>
             <div style={{ textAlign: 'center', flex: 1 }}>
+              <div className="badge blue" style={{ marginBottom: '16px' }}>How It Started</div>
               <h3 style={{ fontSize: '1.6rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>GPT-2 & GPT-3</h3>
-              <p style={{ fontSize: '1.1rem' }}>General Text Prediction<br />Limited code understanding</p>
+              <p style={{ fontSize: '1.1rem' }}>General Text Prediction<br />Very limited code understanding</p>
             </div>
             <ArrowRight size={32} color="rgba(255,255,255,0.2)" />
             <div style={{ textAlign: 'center', flex: 1 }}>
+              <div className="badge purple" style={{ marginBottom: '16px' }}>The Shift</div>
               <h3 style={{ fontSize: '1.8rem', color: 'var(--accent-purple)', marginBottom: '16px' }}>ChatGPT (GPT-4)</h3>
-              <p style={{ fontSize: '1.1rem' }}>Conversational Code<br />Great at explaining snippets</p>
+              <p style={{ fontSize: '1.1rem' }}>Conversational Code<br />Great at explaining isolated snippets</p>
             </div>
             <ArrowRight size={32} color="rgba(255,255,255,0.2)" />
             <div style={{ textAlign: 'center', flex: 1 }}>
-              <h3 style={{ fontSize: '2rem', color: 'var(--accent-cyan)', marginBottom: '16px' }}>OpenAI Codex</h3>
-              <p style={{ fontSize: '1.1rem' }}>Dedicated Code Brain<br />Powering Copilot IDEs</p>
+              <div className="badge pink" style={{ marginBottom: '16px' }}>What's Now</div>
+              <h3 style={{ fontSize: '2rem', color: 'var(--accent-cyan)', marginBottom: '16px' }}>OpenAI O3 / Codex</h3>
+              <p style={{ fontSize: '1.1rem' }}>Dedicated Code Brains<br />Powering real-time Copilot IDEs</p>
             </div>
           </div>
         </AnimatedSlide>
@@ -128,18 +131,61 @@ const slides = [
           <SectionHeading title="The Evolution of Google AI" icon={Activity} badge="Timeline" />
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)', padding: '40px', borderRadius: '24px', border: '1px solid var(--glass-border)', marginTop: '32px' }}>
             <div style={{ textAlign: 'center', flex: 1 }}>
+              <div className="badge blue" style={{ marginBottom: '16px' }}>How It Started</div>
               <h3 style={{ fontSize: '1.6rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>PaLM / Bard</h3>
-              <p style={{ fontSize: '1.1rem' }}>Early Search Integration<br />Basic script generation</p>
+              <p style={{ fontSize: '1.1rem' }}>Early Search Integration<br />Basic scripts only</p>
             </div>
             <ArrowRight size={32} color="rgba(255,255,255,0.2)" />
             <div style={{ textAlign: 'center', flex: 1 }}>
+              <div className="badge purple" style={{ marginBottom: '16px' }}>The Shift</div>
               <h3 style={{ fontSize: '1.8rem', color: 'var(--accent-blue)', marginBottom: '16px' }}>Gemini Pro/Ultra</h3>
-              <p style={{ fontSize: '1.1rem' }}>Massive Context Windows<br />Deep codebase reasoning</p>
+              <p style={{ fontSize: '1.1rem' }}>Massive Context Windows<br />Can read an entire codebase at once</p>
             </div>
             <ArrowRight size={32} color="rgba(255,255,255,0.2)" />
             <div style={{ textAlign: 'center', flex: 1 }}>
+              <div className="badge pink" style={{ marginBottom: '16px' }}>What's Now</div>
               <h3 style={{ fontSize: '2rem', color: 'var(--accent-pink)', marginBottom: '16px' }}>Google Antigravity</h3>
-              <p style={{ fontSize: '1.1rem' }}>Autonomous Agent<br />Compiles, patches & tests</p>
+              <p style={{ fontSize: '1.1rem' }}>Autonomous Agent Workflow<br />Creates, compiles, & tests directly</p>
+            </div>
+          </div>
+        </AnimatedSlide>
+      </div>
+    )
+  },
+  // 5: Evolution of Coders
+  {
+    content: (
+      <div className="slide-container slide-scroll" style={{ alignItems: 'flex-start', padding: '40px 10%', paddingBottom: '120px' }}>
+        <AnimatedSlide>
+          <SectionHeading title="The Evolution of Coders" icon={Briefcase} badge="Human Impact" />
+          <p className="text-lead" style={{ marginBottom: '24px' }}>How the developer daily workflow drastically transformed over the years.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px', textAlign: 'left' }}>
+            <div className="glass-panel" style={{ padding: '24px' }}>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '16px', color: 'var(--text-secondary)' }}>The Early Stage (Pre-AI)</h3>
+              <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                <li><strong>Time taken:</strong> Days or Weeks.</li>
+                <li>Wrote every line of code manually.</li>
+                <li>Hours spent reading API documentation and searching forums.</li>
+                <li>Slow, tedious debugging processes.</li>
+              </ul>
+            </div>
+            <div className="glass-panel" style={{ padding: '24px' }}>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '16px', color: 'var(--accent-purple)' }}>The Shift (Autocomplete AI)</h3>
+              <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                <li><strong>Time taken:</strong> Hours or Days.</li>
+                <li>Line-by-line function predictions via Copilot.</li>
+                <li>Fears around hallucinated snippets.</li>
+                <li>Reduced typing, but developer still orchestrates logic completely.</li>
+              </ul>
+            </div>
+            <div className="glass-panel" style={{ padding: '24px', borderLeft: '4px solid var(--accent-cyan)' }}>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '16px', color: 'var(--accent-cyan)' }}>The AI Era (Autonomous)</h3>
+              <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                <li><strong>Time taken:</strong> Minutes or Hours.</li>
+                <li>Developers define logic and review the code. Agents write it.</li>
+                <li>Up to <strong>55% faster</strong> feature delivery.</li>
+                <li>Focus shifts to architecture and thorough testing.</li>
+              </ul>
             </div>
           </div>
         </AnimatedSlide>
@@ -423,17 +469,46 @@ const slides = [
       </div>
     )
   },
-  // 12: Unexplored Cases
+  // 12: Developer Implementation & Helpfulness
+  {
+    content: (
+      <div className="slide-container slide-scroll" style={{ alignItems: 'flex-start', padding: '40px 10%', paddingBottom: '120px' }}>
+        <AnimatedSlide>
+          <SectionHeading title="Real Developer Implementation" icon={Code2} badge="Usability & Helpfulness" />
+          <p className="text-lead" style={{ marginBottom: '24px' }}>How AI is actually being rolled out to engineering teams, and how it impacts their daily experience.</p>
+          <div className="grid-2">
+             <div className="glass-panel">
+               <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '12px' }}><Settings size={28} /> Setup & Usability</h3>
+               <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                 <li><strong>Easy Local Setup:</strong> Tools like Copilot and Cursor install as simple IDE extensions in seconds.</li>
+                 <li><strong>Seamless UX:</strong> The AI works in the background using "Ghost Text" (gray suggestions). Developers just hit <code>Tab</code> to accept.</li>
+                 <li><strong>Low Friction:</strong> No need to switch to a browser window; the AI lives where the code is written.</li>
+               </ul>
+             </div>
+             <div className="glass-panel">
+               <h3 style={{ fontSize: '1.6rem', marginBottom: '16px', color: 'var(--accent-pink)', display: 'flex', alignItems: 'center', gap: '12px' }}><ThumbsUp size={28} /> Developer Feedback & Feelings</h3>
+               <ul style={{ paddingLeft: '20px', fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                 <li><strong>Less Mental Fatigue:</strong> AI handles the boring, repetitive typing, keeping developers in a "flow state".</li>
+                 <li><strong>More Creativity:</strong> Developers spend time solving complex logic rather than remembering specific syntax.</li>
+                 <li><strong>Highly Helpful:</strong> 85% of developers report feeling more satisfied with their jobs after implementing AI tools.</li>
+               </ul>
+             </div>
+          </div>
+        </AnimatedSlide>
+      </div>
+    )
+  },
+  // 13: Unexplored Developer Use Cases
   {
     content: (
       <div className="slide-container slide-scroll" style={{ alignItems: 'flex-start', padding: '40px 10%' }}>
         <AnimatedSlide>
-          <SectionHeading title="Unexplored but Powerful Use Cases" icon={Lightbulb} badge="Innovation" />
+          <SectionHeading title="Unexplored Developer Edge Cases" icon={Lightbulb} badge="Innovation" />
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', marginTop: '24px' }}>
-            <Card title="1. Fleet-wide Automation" text="Use Antigravity to convert a massive mono-repo from JavaScript to strict TypeScript autonomously, fixing type errors continuously overnight." icon={Zap} />
-            <Card title="2. Zero-Day Patching" text="Agent crawls the codebase looking for specific insecure design patterns or deprecated dependency usage, generating safe patch PRs." icon={ShieldCheck} color="var(--accent-pink)" />
-            <Card title="3. Edge Case Amplification" text="Supply logic. AI returns obscure, tricky edge-case unit tests that developers frequently overlook in standard TDD practices." icon={FileCode2} color="#10b981" />
-            <Card title="4. 'Repo to Wiki' Generation" text="Point the agent at an undocumented legacy system to auto-read components, establish relationships, and write comprehensive Confluence docs." icon={Layers} color="#f59e0b" />
+            <Card title="1. Instant Bug Feedback Loops" text="Connect an AI agent to your error tracker. When a bug happens in live production, the agent reads the error, finds the broken code, and writes a fix immediately." icon={Zap} />
+            <Card title="2. Generative UX/UI Building" text="Developers feed raw user-data to an AI model, and the AI automatically adjusts the frontend button colors and layouts to improve user clicks." icon={Layers} color="var(--accent-pink)" />
+            <Card title="3. Edge Case Amplification" text="A developer writes the basic rule. The AI returns 50 extremely weird, tricky edge-case test rules that humans usually forget about." icon={FileCode2} color="#10b981" />
+            <Card title="4. Auto-Documenting Old Code" text="Point an autonomous agent at a terrible, 10-year-old codebase with no notes. It auto-reads everything and writes a beautiful, clean wiki guide." icon={Glasses} color="#f59e0b" />
           </div>
         </AnimatedSlide>
       </div>
