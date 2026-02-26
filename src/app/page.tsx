@@ -577,42 +577,6 @@ const slides = [
       </div>
     )
   },
-  // 15: Enterprise
-  // {
-  //   content: (
-  //     <div className="slide-container slide-scroll" style={{ alignItems: 'flex-start', padding: '40px 10%' }}>
-  //       <AnimatedSlide>
-  //         <SectionHeading title="Enterprise Strategy & Adoption" icon={Briefcase} badge="Business Considerations" />
-  //         <table className="glass-table" style={{ marginTop: '32px' }}>
-  //           <thead>
-  //             <tr>
-  //               <th style={{ fontSize: '1.4rem' }}>Key Concern</th>
-  //               <th style={{ fontSize: '1.4rem' }}>Business Impact</th>
-  //             </tr>
-  //           </thead>
-  //           <tbody>
-  //             <tr>
-  //               <td style={{ fontSize: '1.2rem', fontWeight: 600 }}><Lock size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} /> Data Privacy</td>
-  //               <td style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>Fears of sending proprietary logic out to third-party endpoints. (Mitigated by zero-retention enterprise SLAs).</td>
-  //             </tr>
-  //             <tr>
-  //               <td style={{ fontSize: '1.2rem', fontWeight: 600 }}><ShieldCheck size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} /> Compliance</td>
-  //               <td style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>Navigating strict regulations (HIPAA, FedRAMP). AI outputs must be traceable and auditable.</td>
-  //             </tr>
-  //             <tr>
-  //               <td style={{ fontSize: '1.2rem', fontWeight: 600 }}><Activity size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} /> Model Accuracy</td>
-  //               <td style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>At enterprise scale, a 5% hallucination rate across 1,000 engineers yields massive technical debt.</td>
-  //             </tr>
-  //             <tr>
-  //               <td style={{ fontSize: '1.2rem', fontWeight: 600 }}><Network size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} /> Vendor Lock-in</td>
-  //               <td style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>Over-reliance on one ecosystem (Microsoft vs. Google) creates massive pipeline dependencies over time.</td>
-  //             </tr>
-  //           </tbody>
-  //         </table>
-  //       </AnimatedSlide>
-  //     </div>
-  //   )
-  // },
   // 16: Future Direction
   {
     content: (
